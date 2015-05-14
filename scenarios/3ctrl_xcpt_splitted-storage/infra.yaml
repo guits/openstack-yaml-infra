@@ -7,7 +7,6 @@ profiles:
       1:
         roles:
           - cloud::install::puppetdb::server
-          - cloud::database::nosql::redis::server
   controller:
     arity: 3
     edeploy: openstack-full
@@ -16,6 +15,8 @@ profiles:
         roles:
           - cloud::database::sql::mysql
           - cloud::database::nosql::mongodb::mongod
+          - cloud::database::nosql::redis::server
+          - cloud::database::nosql::redis::sentinel
           - cloud::messaging
           - cloud::database::nosql::memcached
           - cloud::storage::rbd::monitor
