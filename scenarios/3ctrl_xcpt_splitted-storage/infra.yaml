@@ -106,7 +106,6 @@ profiles:
     steps:
       2:
         roles:
-          - cloud::storage::rbd::osd
           - cloud::object::storage
     serverspec_config:
       ks_user_name: ks_admin_tenant
